@@ -1,0 +1,3 @@
+in this models section i have get to know all the details about how to create models and schema :
+
+for more details visit to hitesh sir notes for model : https://stackblitz.com/edit/stackblitz-starters-mg2tiy?file=models%2Ftodos%2Fuser.models.js
