@@ -11,4 +11,11 @@ app.use(express.urlencoded({extended:true, limit:"16kb"}));
 app.use(express.static("public"))
 app.use(cookieParser);
 
+//import router
+
+import userRouter from "./routes/user.routes.js" //.js laga dena kyoki debugging me kafi bar issue hoti hai
+
+//routes declaration 
+app.use("/api/v1/users", userRouter)
+
 export {app}
