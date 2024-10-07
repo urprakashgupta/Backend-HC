@@ -1,4 +1,4 @@
-import mogngoose , {Schema} from "mongoose";
+import mongoose , {Schema} from "mongoose";
 import bcrypt from "bcryptjs"
 
 const userSchema = new Schema ({
@@ -87,4 +87,4 @@ userSchema.methods.generateRefreshToken = function(){
     )
 }
 
-export const User = mogngoose.model("User", userSchema);
+export const User = mongoose.model("User", userSchema);
