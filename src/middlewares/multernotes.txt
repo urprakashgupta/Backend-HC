@@ -1,0 +1,34 @@
+xample in Context:
+Let's say you want to allow users to upload profile pictures, and you store them in a temporary folder called temp before moving them to a final location.
+
+Here's how you would use this Multer setup in an Express route:
+code 😂
+
+import express from "express";
+import { upload } from "./uploadMiddleware.js"; // assuming your multer code is in uploadMiddleware.js
+
+const app = express();
+
+// Route to handle profile picture upload
+app.post("/upload", upload.single('profilePic'), (req, res) => {
+    res.send("File uploaded successfully");
+});
+
+// Start server
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
+
+
+
+
+What Happens in this Example:
+When the user sends a POST request to /upload with a file named profilePic, Multer will handle the file upload.
+Multer will:
+Store the file in the ./public/temp directory.
+Save the file with its original name (file.originalName).
+After the upload, the route will respond with a success message.
+Key Terms:
+req: Represents the HTTP request.
+file: Represents the file being uploaded.
+cb: A callback function used by Multer to confirm the destination and filename.
